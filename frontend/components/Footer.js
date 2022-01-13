@@ -2,30 +2,63 @@ import NextImage from "./Image"
 
 const Footer = () => {
   return (
-    <div className="flex justify-between m-6">
-      <p className="text-xs font-semibold text-gray-600">
-        Strapi Starter Next.js E-commerce
-      </p>
-      <div className="flex gap-3 ml-4">
-        <a href="https://twitter.com/strapijs" className="max-w-xs ml-4">
-          <NextImage src="/twitter.svg" width={20} height={20} alt="Twitter" />
-        </a>
-        <a href="https://facebook.com/strapijs" className="ml-3">
-          <NextImage
-            src="/facebook.svg"
-            width={20}
-            height={20}
-            alt="Facebook"
-          />
-        </a>
-        <a
-          href="https://github.com/strapi/strapi-starter-next-ecommerce"
-          className="ml-3"
-        >
-          <NextImage src="/github.svg" width={20} height={20} alt="GitHub" />
-        </a>
-      </div>
-    </div>
+    <footer> 
+             <section className="ft-main">
+                <div className="ft-main-item">
+                <h2 className="ft-title">Shop</h2>
+                <ul>
+                    <li><a href="#">Shop All</a></li>
+                    <li><a href="#">Stationary</a></li>
+                    <li><a href="#">Digital</a></li>  
+                </ul>
+                </div>
+                <div className="ft-main-item">
+                <h2 className="ft-title">About</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Mission</a></li> 
+                    {/*<li><a href="#">Press</a></li>8*/}
+                </ul>
+                </div>
+                <div className="ft-main-item">
+                <h2 className="ft-title">Help</h2>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Returns</a></li>  
+                </ul>
+                </div>
+                <div className="ft-main-item">
+                <h2 className="ft-title">Stay Updated</h2>
+                <p>Get free updates before others do!</p>
+                <form>
+                    <input type="email" name="email" placeholder="Enter email address"/>
+                    <input type="submit" value="Subscribe"/>
+                </form>
+                </div>
+                 
+            </section>
+            {/* Footer social */}
+            <section className="ft-social">
+                <ul className="ft-social-list">
+                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                {/*<li><a href="#"><i className="fa fa-twitter"></i></a></li>*/}
+                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i className="fa fa-github"></i></a></li>
+                {/*<li><a href="#"><i className="fa fa-youtube"></i></a></li>*/}
+                <li><a href="#"><i className="fa fa-medium"></i></a></li>
+                </ul>
+            </section>
+
+            {/* Footer legal */}
+            <section className="ft-legal">
+                <ul className="ft-legal-list">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li> 
+                </ul>
+            </section>    
+        </footer>
   )
 }
 
