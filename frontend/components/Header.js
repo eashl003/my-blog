@@ -1,8 +1,5 @@
-import Link from "next/link"
-import NextImage from "./Image"  
+import Link from "next/link"  
 import React, { useState } from "react";
-
-
 
 const Header = ({ categories = [], blogs = [] }) => {
   
@@ -22,13 +19,13 @@ const Header = ({ categories = [], blogs = [] }) => {
       <nav>
         <ul className="lg:flex items-center justify-between text-base text-gray-700 pt-4 ml-10 lg:pt-0"> 
           <div id="dropdown">
-          <a className="blog-link" id="blog-link" href="/blog">Blog</a>
+          <a id="blog-link" className="hover:text-indigo-400 font-bold" href="/blog">Blog</a>
           <ul id="dropdown-content">
           {blogs && blogs.map((_blog) => {
             return (
               <li key={_blog.id}>
                 <Link href={`/blogs/${_blog.slug}`} >
-                  <a className="lg:p-1 py-3 px-0 block hover:text-indigo-400"   >
+                  <a id="dropdown-link" className="lg:p-1 py-3 px-0 block hover:text-indigo-400"   >
                     {_blog.name}
                   </a>
               </Link>
@@ -37,15 +34,14 @@ const Header = ({ categories = [], blogs = [] }) => {
             })}
           </ul>
         </div>
-
         <div id="dropdown">
-          <Link href="/shop">Shop</Link>
+          <a className="hover:text-indigo-400 font-bold" href="/shop">Shop</a>
           <ul id="dropdown-content">
           {categories.map((_category) => {
             return (
               <li key={_category.id}>
                 <Link href={`/categories/${_category.slug}`} >
-                  <a className="lg:p-1 py-3 px-0 block hover:text-indigo-400"  >
+                  <a id="dropdown-link" className="lg:p-1 py-3 px-0 block hover:text-indigo-400"  >
                     {_category.name}
                   </a>
                   
@@ -55,7 +51,7 @@ const Header = ({ categories = [], blogs = [] }) => {
             })}
           </ul>
         </div> 
-          <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 " href="/about">About</a></li>
+          <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 font-bold" href="/about">About</a></li>
           {/*<li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2" href="#">Blog</a></li>
           <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2 text-indigo-500" href="#">Sign Up</a></li>*/}
         </ul>
