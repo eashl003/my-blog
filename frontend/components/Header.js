@@ -1,85 +1,72 @@
 import Link from "next/link"
 import NextImage from "./Image"  
- 
+import React, { useState } from "react";
+
+
+
 const Header = ({ categories = [], blogs = [] }) => {
-  return ( 
-    <nav id="navbar" class="bg-gray-800">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-20">
-      <Link href="/">
-        <a>
-          TEST NAME
-        </a>
-      </Link>
-      <button className="snipcart-checkout flex items-center">
-        <NextImage height="150" width="150" src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-      </button>
-      <div id="blog-link"  class="dropdown">
-        <Link href="/blog">Blog</Link>
-        <ul class="dropdown-content">
-        {blogs && blogs.map((_blog) => {
-          return (
-            <li key={_blog.id}>
-               <Link href={`/blogs/${_blog.slug}`} >
-                <a id="dropdown-link" >
-                  {_blog.name}
-                </a>
-                
-            </Link>
-            </li>
-          )
-          })}
-        </ul>
-      </div>
-      <div id="shop-link" class="dropdown">
-        <Link href="/shop">Shop</Link>
-        <ul class="dropdown-content">
-        {categories.map((_category) => {
-          return (
-            <li key={_category.id}>
-               <Link href={`/categories/${_category.slug}`} >
-                <a id="dropdown-link" >
-                  {_category.name}
-                </a>
-                
-            </Link>
-            </li>
-          )
-          })}
-        </ul>
-         
-      </div>
-      <div id="shop-link" ><a href="/about">About</a></div>
-         
-      </div>
+  
+  return (
+    <header className="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2">
+    <div className="flex-1 flex justify-between items-center">
+     test
     </div>
-    </nav>
+   
+    <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block"
+      ><svg className="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg
+    ></label> 
+    <input className="hidden" type="checkbox" id="menu-toggle" />
+    <div className="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul className="lg:flex items-center justify-between text-base text-gray-700 pt-4 ml-10 lg:pt-0"> 
+          <div id="dropdown">
+          <a className="blog-link" id="blog-link" href="/blog">Blog</a>
+          <ul id="dropdown-content">
+          {blogs && blogs.map((_blog) => {
+            return (
+              <li key={_blog.id}>
+                <Link href={`/blogs/${_blog.slug}`} >
+                  <a className="lg:p-1 py-3 px-0 block hover:text-indigo-400"   >
+                    {_blog.name}
+                  </a>
+              </Link>
+              </li>
+            )
+            })}
+          </ul>
+        </div>
+
+        <div id="dropdown">
+          <Link href="/shop">Shop</Link>
+          <ul id="dropdown-content">
+          {categories.map((_category) => {
+            return (
+              <li key={_category.id}>
+                <Link href={`/categories/${_category.slug}`} >
+                  <a className="lg:p-1 py-3 px-0 block hover:text-indigo-400"  >
+                    {_category.name}
+                  </a>
+                  
+              </Link>
+              </li>
+            )
+            })}
+          </ul>
+        </div> 
+          <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 " href="/about">About</a></li>
+          {/*<li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2" href="#">Blog</a></li>
+          <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2 text-indigo-500" href="#">Sign Up</a></li>*/}
+        </ul>
+      </nav>
+    </div>
+  </header>
   )
 }
 
 export default Header
 
- /*
- <div className="flex justify-between ml-6 mr-6 mt-4">
-      <nav class="navbar navbar-inverse">
-      <Link href="/">
-        <a>
-          <NextImage
-            src="/strapi.png"
-            alt="home"
-            className="logo"
-            height="44"
-            width="150"
-          />
-        </a>
-      </Link>
-      <button className="snipcart-checkout flex items-center">
-        <NextImage height="150" width="150" src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-      </button>
-      </nav>
-    </div>
- */
+
 
    
