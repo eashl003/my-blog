@@ -24,7 +24,7 @@
     "slug": {
       "type": "uid"
     },
-    "Image": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -43,6 +43,12 @@
     "blogs": {
       "via": "articles",
       "collection": "blog"
+    },
+    "date_created": {
+      "type": "date"
+    },
+    "category_name": {
+      "type": "string"
     }
   }
 }

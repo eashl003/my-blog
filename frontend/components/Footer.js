@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="ft-main-item">
                 <h2 className="ft-title">About</h2>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="#">Mission</a></li> 
                     {/*<li><a href="#">Press</a></li>8*/}
                 </ul>

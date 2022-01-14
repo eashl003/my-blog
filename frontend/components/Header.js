@@ -5,8 +5,8 @@ const Header = ({ categories = [], blogs = [] }) => {
   
   return (
     <header id="header" className="lg:px-20 flex flex-wrap items-center lg:py-0 py-2">
-    <div className="flex-1 flex justify-between items-center text-white text-bold">
-      <a href="/"> test</a>
+    <div className="flex-1 flex justify-between items-center text-white">
+      <a id="brand" href="/">Test</a>
     </div>
     <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block"
       ><svg className="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">

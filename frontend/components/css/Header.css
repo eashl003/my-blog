@@ -9,9 +9,12 @@
 
 #header {
     background-color: #08313A !important; 
-    height: 10vh !important;
 }
- 
+
+#brand {
+    font-size: 30px !important;
+    font-weight: bold;
+}
 
 @media only screen and (min-width: 1025px){
     
@@ -41,6 +44,9 @@
         display: block; 
     }
     
+    #header {
+        height: 8vh;
+    }
 
 }
 

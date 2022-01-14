@@ -6,7 +6,7 @@ import { getBlogs } from "../utils/api"
 
 const BlogPage = ({ articles, blogs }) => {
   return (
-    <div> Blog page
+    <div>  
       <ArticlesList articles={articles} />
     </div>
   )

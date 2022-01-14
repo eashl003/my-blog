@@ -2,3 +2,17 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+#article-descr {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important; /* number of lines to show */
+    -webkit-box-orient: vertical !important;
+    margin-top: 20px !important;
+    margin-left: -3px !important;
+    margin-bottom: 10px !important;
+}
+
+#blog-card:hover { 
+    box-shadow: 4px 4px 5px #181818 ;
+}

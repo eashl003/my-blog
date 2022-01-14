@@ -1,32 +1,39 @@
+import NextImage from "./Image"
 import Link from "next/link" 
-
+ 
 const ArticlesList = ({ articles }) => {
-  return (
-    <div className="flex justify-center bg-gray-200">
-     <div className="max-w-screen-lg flex flex-col min-h-screen w-full"> 
-      <div className="m-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-10 mt-8">
-        {articles.map((_article) => (
-          <div
-            key={_article.id}
-            className="border rounded-lg bg-gray-100 hover:shadow-lg shadow-md"
-          >
-            <Link href={`/articles/${_article.slug}`}>
-              <a>
-                <div className="pl-4 pr-4 pb-4 pt-4 rounded-lg">
-                  <h4 className="mt-1 font-semibold text-base leading-tight truncate text-gray-700">
-                    {_article.title} 
-                  </h4>
-                  <div className="mt-1 text-sm text-gray-700">
-                    {_article.description}
-                  </div>
-                </div>
+ 
+  return ( 
+   <div className="mt-6 mb-10 ml-6 grid md:grid-cols-2">
+      {articles.map((_article) => (
+      <div key={_article.id} className="flex flex-col md:flex-row mt-8 ">
+        <div className="w-full  mr-8">
+          <div id="blog-card" className="flex border border-grey-light rounded overflow-hidden shadow">
+            <div className="w-full lg:w-2/3 p-4">
+              <h3 className="">
+                <a href="#" className="font-serif font-bold no-underline hover:underline text-3xl text-black">
+                {_article.title} 
+                </a>
+              </h3>
+              <span className="font-sans text-grey-dark">{_article.date_created}
+              </span>
+             
+              <p id="article-descr" className="text-grey-darkest">
+              {_article.description}
+              </p>
+            
+              <a href={`/articles/${_article.slug}`} className="no-underline hover:underline text-blue">
+                              Continue reading
               </a>
-            </Link>
+            </div>
+            <div className="hidden lg:block lg:w-1/2 mt-2 mb-2 mr-2">
+              <NextImage media={_article.image} />
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-    </div>
+    ))}
+  </div> 
   ) 
 }
 
