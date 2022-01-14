@@ -16,3 +16,7 @@
 #blog-card:hover { 
     box-shadow: 4px 4px 5px #181818 ;
 }
+
+.blog-buttons {
+    margin-top: 1rem;
+}

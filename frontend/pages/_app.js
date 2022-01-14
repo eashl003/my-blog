@@ -21,6 +21,9 @@ const MyApp = ({ Component, pageProps }) => {
           async
           src="https://cdn.snipcart.com/themes/v3.0.16/default/snipcart.js"
         />
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+        </style>
       </Head>
       <Component {...pageProps} />
     </Layout>

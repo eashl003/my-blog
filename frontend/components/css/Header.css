@@ -7,13 +7,26 @@
     margin-right: 20px !important; 
 }
 
-#header {
-    background-color: #08313A !important; 
+#blog-link:hover {
+    font-size: 17px;
 }
 
+#menu-link:hover {
+    font-size: 17px;
+}
+
+#header {
+    background-color: #08313A !important; 
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+}
+ 
 #brand {
-    font-size: 30px !important;
-    font-weight: bold;
+    font-size: 30px !important; 
+}
+
+#brand:hover {
+    font-size:32px !important;
 }
 
 @media only screen and (min-width: 1025px){
