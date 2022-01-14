@@ -15,7 +15,7 @@ const ArticlesList = ({ articles }) => {
                 {_article.title} 
                 </a>
               </h3>
-              <span className="font-sans text-grey-dark">{_article.date_created}
+              <span className="font-sans text-grey-dark">{new Date(_article.date_created).toLocaleDateString("en")}
               </span>
              
               <p id="article-descr" className="text-grey-darkest">

@@ -1,6 +1,9 @@
-import NextImage from "./Image"
+import React, { Component } from 'react';
+import Subscribe from './Subscribe';
 
 const Footer = () => {
+
+
   return (
     <footer> 
              <section className="ft-main">
@@ -29,12 +32,21 @@ const Footer = () => {
                 </ul>
                 </div>
                 <div className="ft-main-item">
-                <h2 className="ft-title">Stay Updated</h2>
-                <p>Get free updates before others do!</p>
-                <form>
-                    <input type="email" name="email" placeholder="Enter email address"/>
-                    <input type="submit" value="Subscribe"/>
+               
+                <Subscribe />
+              
+
+
+
+
+
+
+               {/* 
+               <form onSubmit={sendEmail}>
+                    <input type="email" name="user_email" placeholder="Enter email address"/>
+                    <input type="submit" value="Send"/>
                 </form>
+                */}
                 </div>
                  
             </section>

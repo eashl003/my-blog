@@ -13,8 +13,13 @@
     "cross-env": "7.0.3"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "axios": "^0.24.0",
     "bootstrap": "^3.4.1",
+    "emailjs-com": "^3.2.0",
+    "json-schema-traverse": "^1.0.0",
+    "react-markdown": "^6.0.0",
+    "react-popup": "^0.10.0",
     "uikit": "^3.9.4",
     "yarn": "^1.22.17"
   }
