@@ -27,12 +27,12 @@ class Subscribe extends Component {
  
   render() {
     return (
-      <div>
-        <h2 className="text-2xl text-white font-serif" >Stay Updated</h2> 
+      <div className="footer">
+        <h2 id="subscribe" className="text-3xl font-serif" >Stay Updated</h2> 
         <div className="h1 mb-2 text-lg">
           { this.state.message }
         </div>
-        <form  onClick={this.updateContent} onSubmit={sendEmail}>
+        <form onClick={this.updateContent} onSubmit={sendEmail}>
                     <input type="email" name="user_email" placeholder="Enter email address" required/>
                     <input type="submit" value="Send"/>
         </form> 

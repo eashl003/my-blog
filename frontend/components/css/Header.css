@@ -1,33 +1,50 @@
-
 #menu-toggle:checked + #menu {
     display: block;
-  }
-
-#blog-link {
-    margin-right: 20px !important; 
 }
 
-#blog-link:hover {
-    font-size: 17px;
+#blog-link, #shop-link {
+    margin-right: 6px !important;  
 }
 
-#menu-link:hover {
-    font-size: 17px;
+#arrow {
+    margin-right: 30px;
 }
 
 #header {
     background-color: #08313A !important; 
     font-family: 'Raleway', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 3.5px;
+    color: #00CF8D !important;
+    font-weight: bold;
+    text-transform: uppercase;
 }
  
 #brand {
     font-size: 30px !important; 
 }
 
-#brand:hover {
-    font-size:32px !important;
+.icon {
+    font-size: 13px;
+    color: #00CF8D;
+    transform: translate(0px);
+    transition: all .5s ease-in-out;
 }
+
+.icon.open { 
+    transform: translate(0%, 0%) rotate(180deg);
+}
+
+.dropdown-body {
+    padding: 5px; 
+    display: none;
+    text-decoration: none;
+}
+  
+.dropdown-body.open {
+    display: block;
+    text-decoration: none;        
+}
+
 
 @media only screen and (min-width: 1025px){
     
@@ -37,42 +54,61 @@
     }
       
     #dropdown-content {
-
         left: 50% !important;
         right: auto !important;
         text-align: center !important;
         transform: translate(-50%, 0) !important;
         margin-top: 1px;
-        
+        color: #08313A;
         display: none;
         position: absolute;
-        background-color: #fff;
+        background-color: rgba(133, 197, 178, 1);
         width: 240px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         padding: 12px 16px;
         z-index: 1; 
     }
       
-    #dropdown:hover #dropdown-content {
+    #dropdown-content {
         display: block; 
+        font-weight:bold;
     }
     
-    #header {
-        height: 8vh;
+
+    #shop-link:hover, #blog-link:hover,#menu-link:hover {
+        text-decoration: underline #00CF8D 2.8px;
+        text-underline-offset: 30.6px;
     }
 
-}
-
-@media only screen and (max-width: 1025px) {
-    #dropdown-link {
-        margin-left: 10px;
-        color: #f2f2f2; 
-        padding: 3px;
+    #brand:hover {
+        text-decoration: underline #00CF8D 2.8px;
+        text-underline-offset: 25.6px;    
     }
-     
-  
+   
+   
+}
+ 
+ 
+
+@media only screen and (max-width: 1025px)  {
+
+    #arrow {
+        margin-top: -10px !important;
+        padding-top: 30px !important; 
+    }
+
+    #dropdown-link:hover,#shop-link:hover, #blog-link:hover,#menu-link:hover {  
+        color: rgba(242, 242, 242,0.8)  
+    }
+    
+    .icon.open { 
+        transform: translate(0%, 65%) scaleY(-1) !important;
+    }
+
+
 }
 
-#dropdown-link:hover {  
-    font-weight: bold; 
-}
+
+
+
+

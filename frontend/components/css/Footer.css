@@ -1,24 +1,28 @@
 
 footer {
     background-color: #08313A; /*#555*/
-    color: #bbb;
+    color: #00CF8D;
     line-height: 1.5;
     position: relative !important;
     bottom: 0;
     width: 100%;
 }
+
 footer a {
     text-decoration: none;
-    color: #eee;
+     
 }
 
-.ft-title {
-    color: #fff;
+.ft-title { 
+    font-weight: bold;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     padding-bottom: 0.625rem;
 }
 
+#subscribe {
+    margin-top: -15px;
+}
 /* Sticks footer to bottom */
 body {
     display: flex;
@@ -74,7 +78,7 @@ input[type="submit"] {
 .ft-social-list {
     display: flex;
     justify-content: center;
-    border-top: 1px #777 solid;
+    border-top: 1px #00CF8D solid;
     padding-top: 1.25rem;
 }
 .ft-social-list li {

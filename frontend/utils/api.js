@@ -57,3 +57,8 @@ export async function getAbout() {
   return about;
 }
  
+export async function getHome() {
+  const home = await fetchAPI("/home");
+  return home;
+}
+ 
