@@ -14,7 +14,7 @@ const Header = ({ categories = [], blogs = [] }) => {
   return (
     <header id="header" className="lg:px-20 flex flex-wrap items-center lg:py-0 py-2 h-20">
     <div className="flex-1 flex justify-between items-center ml-10">
-      <a id="brand" href="/">Elisabeth Joy</a>
+      <a id="brand" href="/">Elisabeth</a>
     </div>
     <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
       <svg className="fill-current mr-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">

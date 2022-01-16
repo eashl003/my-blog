@@ -4,6 +4,11 @@
 
 #blog-link, #shop-link {
     margin-right: 6px !important;  
+    font-size: 20px; 
+}
+
+#menu-link {
+    font-size: 20px; 
 }
 
 #arrow {
@@ -11,21 +16,21 @@
 }
 
 #header {
-    background-color: #08313A !important; 
-    font-family: 'Raleway', sans-serif;
+    background-color: rgba(8, 49, 58, 1);
+    font-family: 'Poiret One', cursive;
     letter-spacing: 3.5px;
-    color: #00CF8D !important;
+    color: rgba(133, 197, 178);
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
  
 #brand {
-    font-size: 30px !important; 
+    font-size: 35px !important; 
 }
 
 .icon {
     font-size: 13px;
-    color: #00CF8D;
+    color: rgba(133, 197, 178);
     transform: translate(0px);
     transition: all .5s ease-in-out;
 }
@@ -76,12 +81,12 @@
     
 
     #shop-link:hover, #blog-link:hover,#menu-link:hover {
-        text-decoration: underline #00CF8D 2.8px;
+        text-decoration: underline rgba(133, 197, 178) 2.8px;
         text-underline-offset: 30.6px;
     }
 
     #brand:hover {
-        text-decoration: underline #00CF8D 2.8px;
+        text-decoration: underline rgba(133, 197, 178) 2.8px;
         text-underline-offset: 25.6px;    
     }
    

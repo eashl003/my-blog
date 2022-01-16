@@ -1,0 +1,50 @@
+.home {
+ 
+    background-color: #fff; 
+}
+
+.section-a {
+    height: 80vh;
+    background-image: url("../../public/laptop.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;   
+    background-size: 70% 80%;   
+
+}
+
+ 
+
+.section-b {
+    height: 80vh; 
+    /*background-color: #8D455F;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    */
+}
+
+.section-c {
+    background-color: #85c5b2;
+    height: 50vh;
+}
+ 
+
+
+
+
+
+
+
+
+
+/* Slideshow */
+
+
+.carousel {
+    display: inline-flex;
+    overflow-x: hidden;
+  /*  scroll snap is a great feature which will center the image on snap on touch screen devices  */
+    scroll-snap-type: x mandatory;
+  /* all below will hide the scrollbar on all browsers.    */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }

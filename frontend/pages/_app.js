@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { getBlogs, getCategories } from "../utils/api"
 import "../styles/index.css"
 import "../components/css/Header.css"
+import "../components/css/Home.css"
 import "../components/css/Footer.css"
 import axios from "axios";
 
@@ -25,6 +26,9 @@ const MyApp = ({ Component, pageProps }) => {
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
         </style>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&family=Questrial&family=Raleway:wght@200;400&family=The+Nautigal:wght@700&display=swap');
+</style>
         
       </Head>
       <Component {...pageProps} />

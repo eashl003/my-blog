@@ -1,7 +1,7 @@
 
 footer {
     background-color: #08313A; /*#555*/
-    color: #00CF8D;
+    color: rgba(133, 197, 178, 1);
     line-height: 1.5;
     position: relative !important;
     bottom: 0;
@@ -64,7 +64,7 @@ input[type="email"] {
     margin-top: 0.3125rem;
 }
 input[type="submit"] {
-    background-color: #00d188;
+    background-color: rgba(133, 197, 178, 1);
     color: #fff;
     cursor: pointer;
     border: 0;
@@ -78,7 +78,7 @@ input[type="submit"] {
 .ft-social-list {
     display: flex;
     justify-content: center;
-    border-top: 1px #00CF8D solid;
+    border-top: 1px rgba(133, 197, 178, 1) solid;
     padding-top: 1.25rem;
 }
 .ft-social-list li {
