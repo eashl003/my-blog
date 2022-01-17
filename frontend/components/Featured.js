@@ -4,7 +4,7 @@ import Link from "next/link"
 const FeaturedList = ({ articles }) => {
  
   return ( 
-    <div className="mt-6 mb-10 ml-6 grid md:grid-cols-3">
+    <div className="mt-6 mb-8 ml-6 grid md:grid-cols-3">
         {articles.slice(0,3).map((_article) => (
         <div key={_article.id} class="grid mr-12"> 
         <div class="rounded overflow-hidden shadow-lg flex flex-col">
