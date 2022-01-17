@@ -4,7 +4,7 @@ import { getAbout } from "../utils/api"
 import CategoryButtons from "../components/CategoryButtons"
 import { getArticles } from "../utils/api"
 import { getBlogs } from "../utils/api"
-//import background from "../public/background_video.mp4"
+import background from "../public/fixing_bugs_slideshow.png"
 import Video from "../components/Video"
 import image from "../public/home_background.jpg"
 
@@ -14,9 +14,11 @@ const HomePage = ({ about}) => {
   return (
     <div className="home"> 
       <section className="section-a">
-        <Slideshow />
+         
         <div className="slides"></div>
+        <Slideshow />
         {/* <img className="image" src={image} alt="logo" height={100} width={100} />*/}
+       
       </section> 
       <section className="section-b">
         

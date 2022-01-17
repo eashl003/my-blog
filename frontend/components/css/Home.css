@@ -5,10 +5,10 @@
 
 .section-a {
     height: 80vh;
-    background-image: url("../../public/laptop.png");
-    background-position: center; /* Center the image */
+  /*  background-image: url("../../public/laptop.png");
+    background-position: center; /* Center the image 
     background-repeat: no-repeat;   
-    background-size: 70% 80%;   
+    background-size: 70% 80%;   */
 
 }
 
@@ -35,16 +35,46 @@
 
 
 
+/* Slideshow */ 
 /* Slideshow */
 
-
-.carousel {
-    display: inline-flex;
-    overflow-x: hidden;
-  /*  scroll snap is a great feature which will center the image on snap on touch screen devices  */
-    scroll-snap-type: x mandatory;
-  /* all below will hide the scrollbar on all browsers.    */
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 500px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
   }
