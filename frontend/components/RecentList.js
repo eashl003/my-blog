@@ -1,7 +1,7 @@
 import NextImage from "./Image"
 import Link from "next/link" 
  
-const FeaturedList = ({ articles }) => {
+const RecentList = ({ articles }) => {
  
   return ( 
     <div className="mt-6 mb-8 ml-6 grid md:grid-cols-3">
@@ -13,7 +13,7 @@ const FeaturedList = ({ articles }) => {
             </a>
         <div class="px-6 py-4 mb-auto">
             <div class="mb-3">
-                <a href="#" class="text-xs text-indigo-600 transition duration-500 ease-in-out">
+                <a href="#" class="text-xs font-bold category-name">
                 {_article.category_name} 
                 </a> 
            </div>
@@ -23,13 +23,13 @@ const FeaturedList = ({ articles }) => {
         <p id="article-descr" class="text-gray-500 text-sm">
         {_article.description}
         </p>
-    </div>
-    </div>
-    </div>
-    ))}
+        </div>
+        </div>
+        </div>
+        ))}
     </div>
  
   ) 
 }
 
-export default FeaturedList
+export default RecentList

@@ -9,7 +9,7 @@ const Footer = () => {
              <section className="ft-main">
                 <div className="ft-main-item">
                 <h2 className="ft-title">Shop</h2>
-                <ul>
+                <ul className="footer-list">
                     <li><a href="#">Shop All</a></li>
                     <li><a href="#">Stationary</a></li>
                     <li><a href="#">Digital</a></li>  
@@ -53,13 +53,14 @@ const Footer = () => {
             {/* Footer social */}
             <section className="ft-social">
                 <ul className="ft-social-list">
-                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                {/*<li><a href="#"><i className="fab fa-facebook"></i></a></li>*/}
                 {/*<li><a href="#"><i className="fa fa-twitter"></i></a></li>*/}
-                <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i className="fa fa-github"></i></a></li>
+                {/*<li><a href="#"><i className="fab fa-instagram"></i></a></li>*/}
                 {/*<li><a href="#"><i className="fa fa-youtube"></i></a></li>*/}
-                <li><a href="#"><i className="fa fa-medium"></i></a></li>
+
+                <li><a href="#"><i className="fab fa-medium fa-2x"></i></a></li>
+                <li><a href="#"><i className="fab fa-github fa-2x"></i></a></li>
+                <li><a href="#"><i className="fab fa-linkedin fa-2x"></i></a></li>
                 </ul>
             </section>
 
