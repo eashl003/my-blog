@@ -63,8 +63,16 @@ const Header = ({ categories = [], blogs = [] }) => {
             })}
           </ul>
           </div>
-        </div> 
-          <li><a id="menu-link" className="lg:p-4 py-3 px-0 block font-bold" href="/about">About</a></li>
+        </div>
+            <div id ="dropdown">
+            <ul>
+              <li>
+                <a id="menu-link" className="lg:p-4 py-3 px-0 block font-bold" href="/about">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
           {/*<li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2" href="#">Blog</a></li>
           <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2 text-indigo-500" href="#">Sign Up</a></li>*/}
         </ul>

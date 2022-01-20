@@ -6,6 +6,7 @@ import "../styles/index.css"
 import "../components/css/Header.css"
 import "../components/css/Home.css"
 import "../components/css/Footer.css"
+import "../components/css/BlogCard.css"
 import axios from "axios";
 
 const MyApp = ({ Component, pageProps }) => {

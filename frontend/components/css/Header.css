@@ -1,5 +1,8 @@
 #menu-toggle:checked + #menu {
     display: block;
+    background-color: rgba(8, 49, 58, 1);
+    z-index: 1;
+    padding-bottom: 10px; 
 }
 
 #blog-link, #shop-link {
@@ -88,7 +91,7 @@
 
     #brand:hover {
         text-decoration: underline rgba(133, 197, 178) 2.8px;
-        text-underline-offset: 22.7px;    
+        text-underline-offset: 22.9px;    
     }
    
    
@@ -104,14 +107,34 @@
     }
 
     #dropdown-link:hover,#shop-link:hover, #blog-link:hover,#menu-link:hover {  
-        color: rgba(242, 242, 242,0.8)  
+        color: #fff;  
     }
     
     .icon.open { 
         transform: translate(0%, 65%) scaleY(-1) !important;
     }
 
+    #shop-link, #blog-link, #menu-link{
+        font-size: 25px;
+    }
+    
+    #menu-link {
+        margin-top: -8px;
+        margin-left: -40px;
+    }
 
+    #dropdown-link {
+        margin-left: 14px;
+    }
+
+    #dropdown {
+        text-align: center;
+    }
+
+    #dropdown-content { 
+        text-align: left;
+        margin-left: 45%;
+    }
 }
 
 

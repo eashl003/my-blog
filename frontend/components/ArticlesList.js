@@ -8,28 +8,27 @@ const ArticlesList = ({ articles }) => {
       {articles.map((_article) => (
       <div key={_article.id} className="flex flex-col md:flex-row mt-8 ">
         <div className="w-full  mr-8">
-          <div id="blog-card" className="flex border border-grey-light rounded overflow-hidden shadow">
+          <a href={`/articles/${_article.slug}`}>
+            <div id="blog-card" className="flex border border-grey-light rounded overflow-hidden shadow">
             <div className="w-full lg:w-2/3 p-4">
-              <h3 className="">
-                <a href="#" className="font-serif font-bold no-underline hover:underline text-3xl text-black">
-                {_article.title} 
-                </a>
+              <h3 className="font-serif font-bold text-2xl text-black"> 
+                {_article.title}  
               </h3>
-              <span className="font-sans text-grey-dark">{new Date(_article.date_created).toLocaleDateString("en")}
-              </span>
-             
+              <span className="font-sans text-grey-dark">
+                {new Date(_article.date_created).toLocaleDateString("en")}
+              </span> 
               <p id="article-descr" className="text-grey-darkest">
-              {_article.description}
+                {_article.description}
               </p>
-            
-              <a href={`/articles/${_article.slug}`} className="no-underline hover:underline text-blue">
-                              Continue reading
-              </a>
+              <p className="no-underline hover:underline text-blue">
+                Continue reading
+              </p>
             </div>
             <div className="hidden lg:block lg:w-1/2 mt-2 mb-2 mr-2">
               <NextImage media={_article.image} />
             </div>
           </div>
+          </a>
         </div>
       </div>
     ))}
