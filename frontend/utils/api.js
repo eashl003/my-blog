@@ -62,3 +62,9 @@ export async function getHome() {
   return home;
 }
  
+export async function getFeaturedArticles() {
+  const featuredArticles = await fetchAPI("/articles?featured=true");
+  return featuredArticles;
+}
+
+ 

@@ -1,8 +1,8 @@
 import RecentList from "../components/RecentList"
 import PopularPosts from "../components/PopularPosts"
-import { getArticles } from "../utils/api"
+import { getArticles, getFeaturedArticles } from "../utils/api"
 
-const HomePage = ({ articles }) => {
+const HomePage = ({ articles, featuredArticles }) => {
 
   return (
     <div>  
@@ -35,7 +35,7 @@ const HomePage = ({ articles }) => {
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Most Popular Posts</h1>
         </div>
         <div id="featured" className="container pt-8 mx-auto flex flex-wrap">
-          <PopularPosts articles={articles}/>
+          <PopularPosts featuredArticles={featuredArticles}/>
         </div>
       </section>
     <section className="text-gray-700 body-font border-t border-gray-200">
@@ -55,9 +55,12 @@ const HomePage = ({ articles }) => {
  
 export async function getStaticProps() {
   const articles = await getArticles()
-  return { props: { articles } }
+  const featuredArticles = await getFeaturedArticles()
+
+  return { props: { articles, featuredArticles } }
 }
   
+
 export default HomePage
 
 

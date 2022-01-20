@@ -1,7 +1,7 @@
 import NextImage from "./Image"
 import Link from "next/link" 
  
-const PopularPosts = ({ articles }) => {
+const PopularPosts = ({ featuredArticles }) => {
  
   return ( 
     <section class="text-gray-700 body-font border-t border-gray-200">
@@ -11,14 +11,14 @@ const PopularPosts = ({ articles }) => {
         <img alt="feature" class="object-cover object-center h-full w-full" src="https://res.cloudinary.com/dj3qdir59/image/upload/v1642446846/morning-journal.jpg" />
       </div>
       <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
-      {articles.slice(0,3).map((_article) => (
-        <div key={_article.id} class="flex flex-col mb-10 lg:items-start items-center">
+      {featuredArticles.slice(0,3).map((_featuredArticle) => (
+        <div key={_featuredArticle.id} class="flex flex-col mb-10 lg:items-start items-center">
           <div id="code-icon" class="w-12 h-12 inline-flex items-center justify-center rounded-full text-teal-900 mb-5">
           <i class="fas fa-code"></i>
           </div>
           <div class="flex-grow">
-            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{_article.title} </h2>
-            <p class="leading-relaxed text-base">{_article.description}</p>
+            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{_featuredArticle.title} </h2>
+            <p class="leading-relaxed text-base">{_featuredArticle.description}</p>
             <a class="mt-3 text-teal-900 inline-flex items-center">Continue Reading
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
