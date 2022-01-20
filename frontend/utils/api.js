@@ -67,4 +67,7 @@ export async function getFeaturedArticles() {
   return featuredArticles;
 }
 
- 
+export async function getRecentArticles() {
+  const recentArticles = await fetchAPI("/articles?_sort=date_created:DESC");
+  return recentArticles;
+}
