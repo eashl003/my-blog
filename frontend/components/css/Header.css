@@ -83,12 +83,12 @@
 
     #shop-link:hover, #blog-link:hover,#menu-link:hover {
         text-decoration: underline rgba(133, 197, 178) 2.8px;
-        text-underline-offset: 30.6px;
+        text-underline-offset: 28.5px;
     }
 
     #brand:hover {
         text-decoration: underline rgba(133, 197, 178) 2.8px;
-        text-underline-offset: 25.6px;    
+        text-underline-offset: 22.7px;    
     }
    
    

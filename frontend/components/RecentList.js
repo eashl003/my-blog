@@ -7,7 +7,7 @@ const RecentList = ({ recentArticles }) => {
     <div className="mt-6 mb-8 ml-6 grid md:grid-cols-3">
         {recentArticles.slice(0,3).map((_recentArticle) => (
         <div key={_recentArticle.id} class="grid mr-12"> 
-        <div class="rounded overflow-hidden shadow-lg flex flex-col">
+        <div class="rounded overflow-hidden shadow-lg flex flex-col mb-8">
             <a href="#">
             <NextImage media={_recentArticle.image} />
             </a>

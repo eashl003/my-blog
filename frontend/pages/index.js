@@ -10,7 +10,7 @@ const HomePage = ({ recentArticles, featuredArticles}) => {
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi, I'm Elisabeth!
-              <br className="hidden lg:inline-block"/>Lorem ipsum dolor
+              <br className="hidden lg:inline-block"/><p>Lorem ipsum dolor</p>
             </h1>
             <p className="mb-8 leading-relaxed">Elit eget gravida cum sociis. Semper risus in hendrerit gravida rutrum quisque non tellus. Mauris rhoncus aenean vel elit scelerisque mauris. Porta lorem mollis aliquam ut porttitor leo a diam. Sed faucibus turpis in eu. Id interdum velit laoreet id.</p>
             <div className="flex justify-center">
