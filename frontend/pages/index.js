@@ -27,10 +27,10 @@ const HomePage = ({ recentArticles, featuredArticles}) => {
       <div className="flex flex-col text-center w-full"> 
         <h1 id="recent-post-title" className="mb-6 sm:text-3xl text-2xl font-medium title-font text-gray-900">Recent Posts</h1>
       </div>
-      <section className="text-gray-700 body-font border-t border-gray-200">
+      <section className="text-gray-700 body-font">
         <RecentList recentArticles={recentArticles} />
       </section>
-      <section className="text-gray-700 body-font border-t border-gray-200 mt-20">
+      <section className="text-gray-700 body-font  mt-20">
         <div className="flex flex-col text-center w-full"> 
           <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Most Popular Posts</h1>
         </div>
@@ -38,7 +38,7 @@ const HomePage = ({ recentArticles, featuredArticles}) => {
           <PopularPosts featuredArticles={featuredArticles}/>
         </div>
       </section>
-    <section className="text-gray-700 body-font border-t border-gray-200">
+    <section className="text-gray-700 body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
