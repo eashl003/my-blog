@@ -20,8 +20,14 @@
     "bootstrap": "^3.4.1",
     "emailjs-com": "^3.2.0",
     "json-schema-traverse": "^1.0.0",
-    "react-markdown": "^6.0.0",
+    "marked": "^4.0.10",
+    "mdast-add-list-metadata": "^1.1.0",
+    "moment": "^2.29.1",
+    "react-dropdown": "^1.9.2",
+    "react-markdown": "^6.0.3",
+    "react-moment": "^1.1.1",
     "react-popup": "^0.10.0",
+    "rehype-react": "^7.0.4",
     "uikit": "^3.9.4",
     "yarn": "^1.22.17"
   }

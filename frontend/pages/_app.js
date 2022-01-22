@@ -28,9 +28,9 @@ const MyApp = ({ Component, pageProps }) => {
           @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
         </style>
         <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&family=Questrial&family=Raleway:wght@200;400&family=The+Nautigal:wght@700&display=swap');
-</style>
-        
+         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&family=Questrial&family=Raleway:wght@200;400&family=The+Nautigal:wght@700&display=swap');
+        </style>
+         
       </Head>
       <Component {...pageProps} />
     </Layout>
