@@ -1,6 +1,10 @@
  
 import { useRouter } from "next/router"
 import { getArticles, getArticle } from "../../utils/api"
+import NextImage from "../../components/Image"
+import ReactMarkdown from "react-markdown"
+import Moment from "react-moment"
+//import Markdown from "../../components/Markdown"
 
 const ArticlePage = ({ article }) => {
   const router = useRouter()
@@ -10,17 +14,24 @@ const ArticlePage = ({ article }) => {
 
   return (
     <div className="m-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mt-8">
-      <Head>
-        <title>{article.title} article</title>
-      </Head> 
-      
+      <h1>{article.title}</h1>
+      <div>
+      <div  >
+                <div >
+               
+                <ReactMarkdown escapeHtml={false}>{article.content}</ReactMarkdown>
+              
+                </div>
+              </div>
+      </div>
+      <div className="rounded-t-lg pt-2 pb-2 m-auto h-40 w-40">
+        <NextImage media={article.image} />
+      </div>
     </div>
   )
 }
 
 export default ArticlePage
-
-
 
 export async function getStaticProps({ params }) {
   const article = await getArticle(params.slug)

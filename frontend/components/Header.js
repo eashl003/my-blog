@@ -1,85 +1,89 @@
-import Link from "next/link"
-import NextImage from "./Image"  
- 
+import Link from "next/link"  
+import React, { useState, useEffect } from "react"; 
+
 const Header = ({ categories = [], blogs = [] }) => {
-  return ( 
-    <nav id="navbar" class="bg-gray-800">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex items-center justify-between h-20">
-      <Link href="/">
-        <a>
-          TEST NAME
-        </a>
-      </Link>
-      <button className="snipcart-checkout flex items-center">
-        <NextImage height="150" width="150" src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-      </button>
-      <div id="blog-link"  class="dropdown">
-        <Link href="/blog">Blog</Link>
-        <ul class="dropdown-content">
-        {blogs && blogs.map((_blog) => {
-          return (
-            <li key={_blog.id}>
-               <Link href={`/blogs/${_blog.slug}`} >
-                <a id="dropdown-link" >
-                  {_blog.name}
-                </a>
-                
-            </Link>
-            </li>
-          )
-          })}
-        </ul>
-      </div>
-      <div id="shop-link" class="dropdown">
-        <Link href="/shop">Shop</Link>
-        <ul class="dropdown-content">
-        {categories.map((_category) => {
-          return (
-            <li key={_category.id}>
-               <Link href={`/categories/${_category.slug}`} >
-                <a id="dropdown-link" >
-                  {_category.name}
-                </a>
-                
-            </Link>
-            </li>
-          )
-          })}
-        </ul>
-         
-      </div>
-      <div id="shop-link" ><a href="/about">About</a></div>
-         
-      </div>
+
+  const [isOpen, setOpen] = useState(false);  
+  
+  const [isShopOpen, setShopOpen] = useState(false); 
+
+  const toggleDropdown = () => setOpen(!isOpen);
+  
+  const toggleDropdownShop = () => setShopOpen(!isShopOpen);
+  
+  return (
+    <header id="header" className="lg:px-20 flex flex-wrap items-center lg:py-0 py-2 h-20">
+    <div className="flex-1 flex justify-between items-center ml-10">
+      <a id="brand" href="/">elisabeth</a>
     </div>
-    </nav>
+    <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block">
+      <svg className="fill-current mr-10" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </label> 
+    <input className="hidden" type="checkbox" id="menu-toggle" />
+    <div className="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul className="lg:flex items-center justify-between pt-4 ml-10 lg:pt-0"> 
+          <div id="dropdown">
+          <a id="blog-link" className="font-bold" href="/blog">Blog</a>
+          <i id="arrow" className={`fa fa-chevron-up icon ${isOpen && "open"}`} onClick={toggleDropdown}></i>
+          <div className={`dropdown-body ${isOpen && 'open'}`}>
+          <ul id="dropdown-content">
+              {blogs && blogs.map((_blog) => {
+                return (
+                  <li key={_blog.id}>
+                    <Link href={`/blogs/${_blog.slug}`} >
+                      <a id="dropdown-link" className="lg:p-1 py-3 px-0 block"   >
+                        {_blog.name}
+                      </a>
+                  </Link>
+                  </li>
+                )
+                })}
+              </ul>
+          </div>
+        </div>
+        <div id="dropdown"> 
+          <a id="shop-link" className="font-bold" href="/shop">Shop</a> 
+          <i id="arrow" className={`fa fa-chevron-up icon ${isShopOpen && "open"}`} onClick={toggleDropdownShop}></i>
+          <div className={`dropdown-body ${isShopOpen && 'open'}`}>
+          <ul id="dropdown-content">
+          {categories.map((_category) => {
+            return (
+              <li key={_category.id}>
+                <Link href={`/categories/${_category.slug}`} >
+                  <a id="dropdown-link" className="lg:p-1 py-3 px-0 block"  >
+                    {_category.name}
+                  </a>
+                  
+              </Link>
+              </li>
+            )
+            })}
+          </ul>
+          </div>
+        </div>
+            <div id ="dropdown">
+            <ul>
+              <li>
+                <a id="menu-link" className="lg:p-4 py-3 px-0 block font-bold" href="/about">
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/*<li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2" href="#">Blog</a></li>
+          <li><a className="lg:p-4 py-3 px-0 block hover:text-indigo-400 lg:mb-0 mb-2 text-indigo-500" href="#">Sign Up</a></li>*/}
+        </ul>
+      </nav>
+    </div>
+  </header>
   )
 }
 
 export default Header
 
- /*
- <div className="flex justify-between ml-6 mr-6 mt-4">
-      <nav class="navbar navbar-inverse">
-      <Link href="/">
-        <a>
-          <NextImage
-            src="/strapi.png"
-            alt="home"
-            className="logo"
-            height="44"
-            width="150"
-          />
-        </a>
-      </Link>
-      <button className="snipcart-checkout flex items-center">
-        <NextImage height="150" width="150" src="/cart.svg" alt="Cart" />
-        <span className="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-      </button>
-      </nav>
-    </div>
- */
+
 
    

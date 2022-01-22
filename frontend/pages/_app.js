@@ -4,6 +4,9 @@ import Layout from "../components/Layout"
 import { getBlogs, getCategories } from "../utils/api"
 import "../styles/index.css"
 import "../components/css/Header.css"
+import "../components/css/Home.css"
+import "../components/css/Footer.css"
+import "../components/css/BlogCard.css"
 import axios from "axios";
 
 const MyApp = ({ Component, pageProps }) => {
@@ -16,10 +19,18 @@ const MyApp = ({ Component, pageProps }) => {
           rel="stylesheet"
           href="https://cdn.snipcart.com/themes/v3.0.16/default/snipcart.css"
         />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"></link>
         <script
           async
           src="https://cdn.snipcart.com/themes/v3.0.16/default/snipcart.js"
         />
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+        </style>
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Poiret+One&family=Questrial&family=Raleway:wght@200;400&family=The+Nautigal:wght@700&display=swap');
+        </style>
+         
       </Head>
       <Component {...pageProps} />
     </Layout>

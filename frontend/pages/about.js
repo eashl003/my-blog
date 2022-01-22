@@ -4,17 +4,19 @@ import { getAbout } from "../utils/api";
 
 const About = ({about}) => {
     return (
-      <div> {about.title}</div>
+      <div> {about.title}
+        <div>
+        </div>
+       
+      </div>
     )
 }
   
-export default About;
-
 export async function getStaticProps() {
   const about = await getAbout()
-
-  return {
-    props: { about },
-  };
+  return { props: { about } }
 }
-  
+
+export default About;
+
+ 
